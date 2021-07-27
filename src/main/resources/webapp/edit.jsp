@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Edit Employee Details</title>
+<title>Edit Employee </title>
 </head>
 <body class="bg-light  ">
 <%if(session.getAttribute("authorized")==null){
