@@ -1,21 +1,36 @@
 
 pipeline {
-  agent any
-  stages {
+    agent any
+ 
+    tools {
+        jdk "JDK"
+    }
+ 
   
-  stage('Maven Installation')
-    {
-    steps{
-        echo "Building the checked out project...";
-       mvn clean install
+    stages {
+        stage('git repo & clean') {
+            steps {
+            
+                bat "mvn clean"
+            }
+        }
+        stage('install') {
+            steps {
+                bat "mvn install"
+            }
+        }
+        stage('test') {
+            steps {
+                bat "mvn test"
+            }
+        }
+        stage('package') {
+            steps {
+                bat "mvn package"
+            }
         }
     }
-    stage('Deploy')
-    {
-      steps{
-        echo "Deploying Project";
-        
-    }
-    }
-}
+
+ 
+
 }
