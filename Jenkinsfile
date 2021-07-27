@@ -7,7 +7,7 @@ pipeline {
     {
     steps{
         echo "Building the checked out project...";
-        bat "mvn clean install";
+      mvn clean install;
         }
     }
     stage('Deploy')
