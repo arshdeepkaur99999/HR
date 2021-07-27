@@ -8,7 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>Edit Employee Details</title>
 </head>
-<body class="bg-light">
+<body class="bg-light  ">
 <%if(session.getAttribute("authorized")==null){
 		String redirectURL = "http://localhost:8080/hr-authentication/logout.jsp";
 	    response.sendRedirect(redirectURL);
